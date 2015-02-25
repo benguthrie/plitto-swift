@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		355018FEE6B3A7F56821E643 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4BCE7F14F19DB04DBF896E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3B87DF385EBD677C5A2E3D1F /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		41E4CEC09B029E1233A3F907 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		588E949B310E5E0BA410A076 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		878012AD30D34A0EC8ACCDFD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4BCE7F14F19DB04DBF896E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52CE5871A94E34000685D58 /* PlittoAPI.swift */; };
+		B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949761A9D32A30021A6E5 /* DittoB.swift */; };
+		B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497A1A9D33C00021A6E5 /* FeedView.swift */; };
+		B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497C1A9D35D30021A6E5 /* Constants.swift */; };
+		B59949831A9E50C80021A6E5 /* feedSetionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949821A9E50C80021A6E5 /* feedSetionController.swift */; };
+		B59949851A9E56FD0021A6E5 /* feedSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */; };
+		B59949871A9E58CE0021A6E5 /* feedSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59949861A9E58CE0021A6E5 /* feedSection.xib */; };
+		B5B4AB4A1A93EA6500F78F20 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4AB491A93EA6500F78F20 /* profileViewController.swift */; };
+		B5CF19CE1A910FF500BCCFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */; };
+		B5CF19D21A910FF600BCCFDF /* DittoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */; };
+		B5CF19D51A910FF600BCCFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D31A910FF600BCCFDF /* Main.storyboard */; };
+		B5CF19D71A910FF600BCCFDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D61A910FF600BCCFDF /* Images.xcassets */; };
+		B5CF19DA1A910FF600BCCFDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D81A910FF600BCCFDF /* LaunchScreen.xib */; };
+		B5CF19E61A910FF600BCCFDF /* Plitto_ETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19E51A910FF600BCCFDF /* Plitto_ETests.swift */; };
+		B5CF19F51A9243D400BCCFDF /* DemoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19F41A9243D400BCCFDF /* DemoContent.swift */; };
+		B5CF1A301A9299CB00BCCFDF /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF1A2F1A9299CB00BCCFDF /* PeopleViewController.swift */; };
+		B5CF1A321A929A4700BCCFDF /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CF1A311A929A4700BCCFDF /* PersonCell.xib */; };
+		B5CF1A361A929B0500BCCFDF /* PersonCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF1A351A929B0500BCCFDF /* PersonCellTableViewCell.swift */; };
+		B5CF1A381A92A24500BCCFDF /* DemoFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */; };
+		BB9E7B2CAB9F1982C6EAED08 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		E526DA9D2D5C4211A25C24FA /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		ED1A0D0498E597EB046DEE79 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5CF19E01A910FF600BCCFDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5CF19C01A910FF500BCCFDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5CF19C71A910FF500BCCFDF;
+			remoteInfo = "Plitto E";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B58EE6F31A9912D000772F4D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7AAC7960BDB7400114E9F1E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B52CE5871A94E34000685D58 /* PlittoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlittoAPI.swift; sourceTree = "<group>"; };
+		B59949761A9D32A30021A6E5 /* DittoB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DittoB.swift; sourceTree = "<group>"; };
+		B599497A1A9D33C00021A6E5 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		B599497C1A9D35D30021A6E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B59949821A9E50C80021A6E5 /* feedSetionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSetionController.swift; sourceTree = "<group>"; };
+		B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSectionCell.swift; sourceTree = "<group>"; };
+		B59949861A9E58CE0021A6E5 /* feedSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedSection.xib; sourceTree = "<group>"; };
+		B5B4AB491A93EA6500F78F20 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		B5CECEB31A9684BB00D2C66B /* plittoAPI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = plittoAPI.playground; sourceTree = "<group>"; };
+		B5CF19C81A910FF500BCCFDF /* Plitto E.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plitto E.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CF19CC1A910FF500BCCFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DittoViewController.swift; sourceTree = "<group>"; };
+		B5CF19D41A910FF600BCCFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5CF19D61A910FF600BCCFDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5CF19D91A910FF600BCCFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B5CF19DF1A910FF600BCCFDF /* Plitto ETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plitto ETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CF19E41A910FF600BCCFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5CF19E51A910FF600BCCFDF /* Plitto_ETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plitto_ETests.swift; sourceTree = "<group>"; };
+		B5CF19F21A911DB900BCCFDF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B5CF19F41A9243D400BCCFDF /* DemoContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoContent.swift; sourceTree = "<group>"; };
+		B5CF1A2F1A9299CB00BCCFDF /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleViewController.swift; path = ../PeopleViewController.swift; sourceTree = "<group>"; };
+		B5CF1A311A929A4700BCCFDF /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		B5CF1A351A929B0500BCCFDF /* PersonCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCellTableViewCell.swift; sourceTree = "<group>"; };
+		B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoFriendList.swift; sourceTree = "<group>"; };
+		CF4BCE7F14F19DB04DBF896E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5CF19C51A910FF500BCCFDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878012AD30D34A0EC8ACCDFD /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5CF19DC1A910FF600BCCFDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41E4CEC09B029E1233A3F907 /* (null) in Frameworks */,
+				ED1A0D0498E597EB046DEE79 /* (null) in Frameworks */,
+				588E949B310E5E0BA410A076 /* (null) in Frameworks */,
+				E526DA9D2D5C4211A25C24FA /* (null) in Frameworks */,
+				3B87DF385EBD677C5A2E3D1F /* (null) in Frameworks */,
+				BB9E7B2CAB9F1982C6EAED08 /* (null) in Frameworks */,
+				355018FEE6B3A7F56821E643 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98EF53240EBC821C7F1632E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */,
+				7AAC7960BDB7400114E9F1E4 /* Pods.debug.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5CF19BF1A910FF500BCCFDF = {
+			isa = PBXGroup;
+			children = (
+				B5CECEB31A9684BB00D2C66B /* plittoAPI.playground */,
+				B5CF19F11A911DA000BCCFDF /* Frameworks */,
+				B5CF19CA1A910FF500BCCFDF /* Project Files */,
+				B5CF19E21A910FF600BCCFDF /* Plitto ETests */,
+				B5CF19C91A910FF500BCCFDF /* Products */,
+				98EF53240EBC821C7F1632E0 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B5CF19C91A910FF500BCCFDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF19C81A910FF500BCCFDF /* Plitto E.app */,
+				B5CF19DF1A910FF600BCCFDF /* Plitto ETests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5CF19CA1A910FF500BCCFDF /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */,
+				B59949821A9E50C80021A6E5 /* feedSetionController.swift */,
+				B599497A1A9D33C00021A6E5 /* FeedView.swift */,
+				B59949761A9D32A30021A6E5 /* DittoB.swift */,
+				B5CF19F41A9243D400BCCFDF /* DemoContent.swift */,
+				B5CF1A2F1A9299CB00BCCFDF /* PeopleViewController.swift */,
+				B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */,
+				B5B4AB491A93EA6500F78F20 /* profileViewController.swift */,
+				B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */,
+				B52CE5871A94E34000685D58 /* PlittoAPI.swift */,
+				B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */,
+				B5CF19D31A910FF600BCCFDF /* Main.storyboard */,
+				B5CF1A311A929A4700BCCFDF /* PersonCell.xib */,
+				B5CF1A351A929B0500BCCFDF /* PersonCellTableViewCell.swift */,
+				B5CF19D61A910FF600BCCFDF /* Images.xcassets */,
+				B5CF19D81A910FF600BCCFDF /* LaunchScreen.xib */,
+				B5CF19CB1A910FF500BCCFDF /* Supporting Files */,
+				B5CF19F61A9243E700BCCFDF /* Plitto Classes */,
+				B599497C1A9D35D30021A6E5 /* Constants.swift */,
+				B59949861A9E58CE0021A6E5 /* feedSection.xib */,
+			);
+			name = "Project Files";
+			path = "Plitto E";
+			sourceTree = "<group>";
+		};
+		B5CF19CB1A910FF500BCCFDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF19CC1A910FF500BCCFDF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5CF19E21A910FF600BCCFDF /* Plitto ETests */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF19E51A910FF600BCCFDF /* Plitto_ETests.swift */,
+				B5CF19E31A910FF600BCCFDF /* Supporting Files */,
+			);
+			path = "Plitto ETests";
+			sourceTree = "<group>";
+		};
+		B5CF19E31A910FF600BCCFDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF19E41A910FF600BCCFDF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5CF19F11A911DA000BCCFDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF19F21A911DB900BCCFDF /* FacebookSDK.framework */,
+				CF4BCE7F14F19DB04DBF896E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5CF19F61A9243E700BCCFDF /* Plitto Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Plitto Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5CF19C71A910FF500BCCFDF /* Plitto E */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5CF19E91A910FF600BCCFDF /* Build configuration list for PBXNativeTarget "Plitto E" */;
+			buildPhases = (
+				763D5FEE978164AAD15FBFAA /* Check Pods Manifest.lock */,
+				B5CF19C41A910FF500BCCFDF /* Sources */,
+				B5CF19C51A910FF500BCCFDF /* Frameworks */,
+				B5CF19C61A910FF500BCCFDF /* Resources */,
+				B58EE6F31A9912D000772F4D /* Embed Frameworks */,
+				38AA5B479AEDDDAAC045A2B7 /* Embed Pods Frameworks */,
+				14A3AF999CF7BD19B0410951 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plitto E";
+			productName = "Plitto E";
+			productReference = B5CF19C81A910FF500BCCFDF /* Plitto E.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5CF19DE1A910FF600BCCFDF /* Plitto ETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5CF19EC1A910FF600BCCFDF /* Build configuration list for PBXNativeTarget "Plitto ETests" */;
+			buildPhases = (
+				FC6AD5CC2B0AAAA9801E3C19 /* Check Pods Manifest.lock */,
+				B5CF19DB1A910FF600BCCFDF /* Sources */,
+				B5CF19DC1A910FF600BCCFDF /* Frameworks */,
+				B5CF19DD1A910FF600BCCFDF /* Resources */,
+				12F41435D84B91F063DD2D97 /* Embed Pods Frameworks */,
+				507D3090E6B5BF041BE8C0F7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5CF19E11A910FF600BCCFDF /* PBXTargetDependency */,
+			);
+			name = "Plitto ETests";
+			productName = "Plitto ETests";
+			productReference = B5CF19DF1A910FF600BCCFDF /* Plitto ETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5CF19C01A910FF500BCCFDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ben Guthrie";
+				TargetAttributes = {
+					B5CF19C71A910FF500BCCFDF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					B5CF19DE1A910FF600BCCFDF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B5CF19C71A910FF500BCCFDF;
+					};
+				};
+			};
+			buildConfigurationList = B5CF19C31A910FF500BCCFDF /* Build configuration list for PBXProject "Plitto E" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5CF19BF1A910FF500BCCFDF;
+			productRefGroup = B5CF19C91A910FF500BCCFDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5CF19C71A910FF500BCCFDF /* Plitto E */,
+				B5CF19DE1A910FF600BCCFDF /* Plitto ETests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5CF19C61A910FF500BCCFDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59949871A9E58CE0021A6E5 /* feedSection.xib in Resources */,
+				B5CF19D51A910FF600BCCFDF /* Main.storyboard in Resources */,
+				B5CF19DA1A910FF600BCCFDF /* LaunchScreen.xib in Resources */,
+				B5CF1A321A929A4700BCCFDF /* PersonCell.xib in Resources */,
+				B5CF19D71A910FF600BCCFDF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5CF19DD1A910FF600BCCFDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F41435D84B91F063DD2D97 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14A3AF999CF7BD19B0410951 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38AA5B479AEDDDAAC045A2B7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507D3090E6B5BF041BE8C0F7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		763D5FEE978164AAD15FBFAA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC6AD5CC2B0AAAA9801E3C19 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5CF19C41A910FF500BCCFDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */,
+				B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */,
+				B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */,
+				B59949851A9E56FD0021A6E5 /* feedSectionCell.swift in Sources */,
+				B5CF1A301A9299CB00BCCFDF /* PeopleViewController.swift in Sources */,
+				B5CF19F51A9243D400BCCFDF /* DemoContent.swift in Sources */,
+				B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */,
+				B5B4AB4A1A93EA6500F78F20 /* profileViewController.swift in Sources */,
+				B59949831A9E50C80021A6E5 /* feedSetionController.swift in Sources */,
+				B5CF1A361A929B0500BCCFDF /* PersonCellTableViewCell.swift in Sources */,
+				B5CF19D21A910FF600BCCFDF /* DittoViewController.swift in Sources */,
+				B5CF1A381A92A24500BCCFDF /* DemoFriendList.swift in Sources */,
+				B5CF19CE1A910FF500BCCFDF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5CF19DB1A910FF600BCCFDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5CF19E61A910FF600BCCFDF /* Plitto_ETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5CF19E11A910FF600BCCFDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5CF19C71A910FF500BCCFDF /* Plitto E */;
+			targetProxy = B5CF19E01A910FF600BCCFDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5CF19D31A910FF600BCCFDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5CF19D41A910FF600BCCFDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5CF19D81A910FF600BCCFDF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5CF19D91A910FF600BCCFDF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B52CE62E1A955EC700685D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		B52CE62F1A955EC700685D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AAC7960BDB7400114E9F1E4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos/Pods",
+				);
+				INFOPLIST_FILE = "Plitto E/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Plitto E";
+			};
+			name = Debug;
+		};
+		B52CE6301A955EC700685D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AAC7960BDB7400114E9F1E4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Plitto ETests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Plitto ETests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plitto E.app/Plitto E";
+			};
+			name = Debug;
+		};
+		B5CF19E81A910FF600BCCFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5CF19EB1A910FF600BCCFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos/Pods",
+				);
+				INFOPLIST_FILE = "Plitto E/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Plitto E";
+			};
+			name = Release;
+		};
+		B5CF19EE1A910FF600BCCFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Plitto ETests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Plitto ETests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plitto E.app/Plitto E";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5CF19C31A910FF500BCCFDF /* Build configuration list for PBXProject "Plitto E" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5CF19E81A910FF600BCCFDF /* Release */,
+				B52CE62E1A955EC700685D58 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5CF19E91A910FF600BCCFDF /* Build configuration list for PBXNativeTarget "Plitto E" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5CF19EB1A910FF600BCCFDF /* Release */,
+				B52CE62F1A955EC700685D58 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5CF19EC1A910FF600BCCFDF /* Build configuration list for PBXNativeTarget "Plitto ETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5CF19EE1A910FF600BCCFDF /* Release */,
+				B52CE6301A955EC700685D58 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5CF19C01A910FF500BCCFDF /* Project object */;
+}
