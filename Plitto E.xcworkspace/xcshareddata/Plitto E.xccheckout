@@ -12,20 +12,24 @@
 	<dict>
 		<key>41178CC17D1B02D06BA7B73ED4AFF2F07201842E</key>
 		<string>https://github.com/benguthrie/native-apps</string>
+		<key>CA353F7F4249FBB334015DE7C9F21438608842CC</key>
+		<string>https://github.com/benguthrie/plitto-swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Swift/Plitto E/Plitto E.xcworkspace</string>
+	<string>Plitto E.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>41178CC17D1B02D06BA7B73ED4AFF2F07201842E</key>
 		<string>../../..</string>
+		<key>CA353F7F4249FBB334015DE7C9F21438608842CC</key>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/benguthrie/native-apps</string>
+	<string>https://github.com/benguthrie/plitto-swift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>41178CC17D1B02D06BA7B73ED4AFF2F07201842E</string>
+	<string>CA353F7F4249FBB334015DE7C9F21438608842CC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>41178CC17D1B02D06BA7B73ED4AFF2F07201842E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Native%20Projects</string>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA353F7F4249FBB334015DE7C9F21438608842CC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Plitto%20E</string>
 		</dict>
 	</array>
 </dict>

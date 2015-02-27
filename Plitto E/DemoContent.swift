@@ -37,7 +37,12 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
 
   func returnData( path: String, dataCompletionHandler: (responseSections: [[String:String]]?, responseRows: [[[String:String]]]?) -> ()) {
 
+    // Prep the formatter
+    var timeString = NSDateFormatter()
+    timeString.dateFormat = "yyy-MM-dd HH:mm:ss"
+
     // Make the API call.
+
     //    
     demoContentData(path) { responseObject, error in
       println("responseObject: \(responseObject)")
@@ -45,8 +50,6 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
 
       // Loop through the results.
       var json = JSON(responseObject!)
-
-      //       println(json["results"])
 
       // Placeholder for the section names
       var tempSections = [[String: String]]()
@@ -93,9 +96,9 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
               tempItem["thingName"] = json["results"][index]["lists"][indexB]["items"][indexC]["thingname"].string!
               tempItem["ik"] = json["results"][index]["lists"][indexB]["items"][indexC]["ik"].string!
 
-              tempItem["added"] = json["results"][index]["lists"][indexB]["items"][indexC]["added"].string!
+              // Use TimeAgo rather than not.
+              tempItem["added"] = PlittoAPI().timeAgoSinceDate(timeString.dateFromString(json["results"][index]["lists"][indexB]["items"][indexC]["added"].string!)!)
               tempItem["tid"] = json["results"][index]["lists"][indexB]["items"][indexC]["tid"].string!
-
               tempItem["id"] = json["results"][index]["lists"][indexB]["items"][indexC]["id"].string!
               tempItem["dittoCount"] = json["results"][index]["lists"][indexB]["items"][indexC]["dittoCount"].string!
 

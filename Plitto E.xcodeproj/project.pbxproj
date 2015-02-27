@@ -16,12 +16,15 @@
 		B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949761A9D32A30021A6E5 /* DittoB.swift */; };
 		B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497A1A9D33C00021A6E5 /* FeedView.swift */; };
 		B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497C1A9D35D30021A6E5 /* Constants.swift */; };
-		B59949831A9E50C80021A6E5 /* feedSetionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949821A9E50C80021A6E5 /* feedSetionController.swift */; };
-		B59949851A9E56FD0021A6E5 /* feedSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */; };
+		B59949831A9E50C80021A6E5 /* feedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949821A9E50C80021A6E5 /* feedSection.swift */; };
 		B59949871A9E58CE0021A6E5 /* feedSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59949861A9E58CE0021A6E5 /* feedSection.xib */; };
+		B59949891A9E92400021A6E5 /* feedRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59949881A9E92400021A6E5 /* feedRow.xib */; };
+		B599498B1A9E92520021A6E5 /* feedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599498A1A9E92520021A6E5 /* feedRow.swift */; };
+		B599498D1A9FAFAB0021A6E5 /* timeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599498C1A9FAFAB0021A6E5 /* timeAgo.swift */; };
+		B599498F1A9FBE070021A6E5 /* feedFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599498E1A9FBE070021A6E5 /* feedFooter.xib */; };
+		B59949911A9FBE500021A6E5 /* feedFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949901A9FBE500021A6E5 /* feedFooter.swift */; };
 		B5B4AB4A1A93EA6500F78F20 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4AB491A93EA6500F78F20 /* profileViewController.swift */; };
 		B5CF19CE1A910FF500BCCFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */; };
-		B5CF19D21A910FF600BCCFDF /* DittoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */; };
 		B5CF19D51A910FF600BCCFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D31A910FF600BCCFDF /* Main.storyboard */; };
 		B5CF19D71A910FF600BCCFDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D61A910FF600BCCFDF /* Images.xcassets */; };
 		B5CF19DA1A910FF600BCCFDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CF19D81A910FF600BCCFDF /* LaunchScreen.xib */; };
@@ -65,15 +68,18 @@
 		B59949761A9D32A30021A6E5 /* DittoB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DittoB.swift; sourceTree = "<group>"; };
 		B599497A1A9D33C00021A6E5 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B599497C1A9D35D30021A6E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B59949821A9E50C80021A6E5 /* feedSetionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSetionController.swift; sourceTree = "<group>"; };
-		B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSectionCell.swift; sourceTree = "<group>"; };
+		B59949821A9E50C80021A6E5 /* feedSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSection.swift; sourceTree = "<group>"; };
 		B59949861A9E58CE0021A6E5 /* feedSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedSection.xib; sourceTree = "<group>"; };
+		B59949881A9E92400021A6E5 /* feedRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedRow.xib; sourceTree = "<group>"; };
+		B599498A1A9E92520021A6E5 /* feedRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedRow.swift; sourceTree = "<group>"; };
+		B599498C1A9FAFAB0021A6E5 /* timeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeAgo.swift; sourceTree = "<group>"; };
+		B599498E1A9FBE070021A6E5 /* feedFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedFooter.xib; sourceTree = "<group>"; };
+		B59949901A9FBE500021A6E5 /* feedFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedFooter.swift; sourceTree = "<group>"; };
 		B5B4AB491A93EA6500F78F20 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		B5CECEB31A9684BB00D2C66B /* plittoAPI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = plittoAPI.playground; sourceTree = "<group>"; };
 		B5CF19C81A910FF500BCCFDF /* Plitto E.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plitto E.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF19CC1A910FF500BCCFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DittoViewController.swift; sourceTree = "<group>"; };
 		B5CF19D41A910FF600BCCFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5CF19D61A910FF600BCCFDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B5CF19D91A910FF600BCCFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -149,13 +155,16 @@
 		B5CF19CA1A910FF500BCCFDF /* Project Files */ = {
 			isa = PBXGroup;
 			children = (
-				B59949841A9E56FD0021A6E5 /* feedSectionCell.swift */,
-				B59949821A9E50C80021A6E5 /* feedSetionController.swift */,
+				B59949861A9E58CE0021A6E5 /* feedSection.xib */,
+				B59949821A9E50C80021A6E5 /* feedSection.swift */,
+				B599498E1A9FBE070021A6E5 /* feedFooter.xib */,
+				B59949901A9FBE500021A6E5 /* feedFooter.swift */,
+				B59949881A9E92400021A6E5 /* feedRow.xib */,
+				B599498A1A9E92520021A6E5 /* feedRow.swift */,
 				B599497A1A9D33C00021A6E5 /* FeedView.swift */,
 				B59949761A9D32A30021A6E5 /* DittoB.swift */,
 				B5CF19F41A9243D400BCCFDF /* DemoContent.swift */,
 				B5CF1A2F1A9299CB00BCCFDF /* PeopleViewController.swift */,
-				B5CF19D11A910FF600BCCFDF /* DittoViewController.swift */,
 				B5B4AB491A93EA6500F78F20 /* profileViewController.swift */,
 				B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */,
 				B52CE5871A94E34000685D58 /* PlittoAPI.swift */,
@@ -168,7 +177,7 @@
 				B5CF19CB1A910FF500BCCFDF /* Supporting Files */,
 				B5CF19F61A9243E700BCCFDF /* Plitto Classes */,
 				B599497C1A9D35D30021A6E5 /* Constants.swift */,
-				B59949861A9E58CE0021A6E5 /* feedSection.xib */,
+				B599498C1A9FAFAB0021A6E5 /* timeAgo.swift */,
 			);
 			name = "Project Files";
 			path = "Plitto E";
@@ -303,10 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59949871A9E58CE0021A6E5 /* feedSection.xib in Resources */,
+				B59949891A9E92400021A6E5 /* feedRow.xib in Resources */,
 				B5CF19D51A910FF600BCCFDF /* Main.storyboard in Resources */,
 				B5CF19DA1A910FF600BCCFDF /* LaunchScreen.xib in Resources */,
 				B5CF1A321A929A4700BCCFDF /* PersonCell.xib in Resources */,
 				B5CF19D71A910FF600BCCFDF /* Images.xcassets in Resources */,
+				B599498F1A9FBE070021A6E5 /* feedFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,15 +430,16 @@
 			files = (
 				B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */,
 				B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */,
+				B59949911A9FBE500021A6E5 /* feedFooter.swift in Sources */,
 				B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */,
-				B59949851A9E56FD0021A6E5 /* feedSectionCell.swift in Sources */,
 				B5CF1A301A9299CB00BCCFDF /* PeopleViewController.swift in Sources */,
 				B5CF19F51A9243D400BCCFDF /* DemoContent.swift in Sources */,
 				B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */,
+				B599498B1A9E92520021A6E5 /* feedRow.swift in Sources */,
 				B5B4AB4A1A93EA6500F78F20 /* profileViewController.swift in Sources */,
-				B59949831A9E50C80021A6E5 /* feedSetionController.swift in Sources */,
+				B599498D1A9FAFAB0021A6E5 /* timeAgo.swift in Sources */,
+				B59949831A9E50C80021A6E5 /* feedSection.swift in Sources */,
 				B5CF1A361A929B0500BCCFDF /* PersonCellTableViewCell.swift in Sources */,
-				B5CF19D21A910FF600BCCFDF /* DittoViewController.swift in Sources */,
 				B5CF1A381A92A24500BCCFDF /* DemoFriendList.swift in Sources */,
 				B5CF19CE1A910FF500BCCFDF /* AppDelegate.swift in Sources */,
 			);

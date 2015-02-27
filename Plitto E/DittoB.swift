@@ -71,9 +71,17 @@ class DittoBController: UIViewController {
     super.viewDidLoad()
     //    println("Super viewDidLoad. Populate data.")
 
-    // This is the position (first two) and size (second two) (x, y, width, height )
-    self.tableView.frame = CGRectMake(0, 75, 320, 450);
-    self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+    //Section header register
+    var sectionNib = UINib(nibName: "feedSection", bundle: nil)
+    self.tableView.registerNib(sectionNib, forCellReuseIdentifier: "feedSection")
+
+    var footerNib = UINib(nibName: "feedFooter", bundle: nil)
+    self.tableView.registerNib(footerNib, forCellReuseIdentifier: "feedFooter")
+
+
+    var rowNib = UINib(nibName: "feedRow", bundle: nil)
+    self.tableView.registerNib(rowNib, forCellReuseIdentifier: "feedRow")
 
     // Insert the table into the view. // UPDATE TODO - This doesn't seem needed.
     // self.view.addSubview(tableView)
@@ -82,9 +90,6 @@ class DittoBController: UIViewController {
     populateTableData()
     // TODO - Whatever function works above, add it here.
 
-    //Section header register
-    var sectionNib = UINib(nibName: "feedSection", bundle: nil)
-    self.tableView.registerNib(sectionNib, forCellReuseIdentifier: "feedSection")
 
   }
 
@@ -103,20 +108,15 @@ class DittoBController: UIViewController {
 
   // This is what builds the cell for each row, and returns it.
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //     println("Build the cells")
-
-    // let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-    var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
 
     // Collect the data for each
     let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
 
-    // cell.textLabel?.text =
-    // It executes this as the user navigates up and down. println("object: \(object)")
-    // cell.textLabel?.text = "TEMP" // object["thingname"]
-    cell.textLabel?.text = object["thingName"]
+    var tc: feedRow = tableView.dequeueReusableCellWithIdentifier("feedRow") as feedRow!
+    tc.thingName.text = object["thingName"]
+    tc.dateAdded.text = object["added"]
 
-    return cell
+    return tc
 
   }
 
@@ -135,20 +135,49 @@ class DittoBController: UIViewController {
     return CGFloat(Constants().headerSize)
   }
 
+  // Sets the height of the section footer.
+  func tableView(tableView: UITableView, heightForFoooterInSection section: Int) -> CGFloat {
+    return CGFloat(1500)
+  }
 
   // This creates a view for every row in the header.
-  func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+  func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UITableViewCell! {
+    var footerCell: feedFooter = tableView.dequeueReusableCellWithIdentifier("feedFooter") as feedFooter!
+    return footerCell
+  }
+
+  // This creates a view for every row in the header.
+  func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UITableViewCell! {
     // return FeedView().rowView("the list name", theUserName: "user name")
     // Works, but not styled:      
-    // WORKS when SectionHeader (not nib: ) return FeedView().sectionHeaderNib(self.sections[section]["listname"]!, theUserName: self.sections[section]["userName"]!, userFbuid: self.sections[section]["fbuid"]! )
+    // WORKS when SectionHeader (not nib: ) 
 
-    let headerCell = tableView.dequeueReusableCellWithIdentifier("feedSection") as feedSectionCell
-    // headerCell.backgroundColor = UIColor.cyanColor()
-    // headerCell.headerLabel.text = "Other"
+    // Works, but doesn't update values
+    // return FeedView().sectionHeaderNib(self.sections[section]["listname"]!, theUserName: self.sections[section]["userName"]!, userFbuid: self.sections[section]["fbuid"]! )
 
-    return headerCell
+    // In the people view section: tempItem["ik"] = json["results"][index]["lists"][indexB]["items"][indexC]["ik"].string!
 
 
+    var tvc: feedSection = tableView.dequeueReusableCellWithIdentifier("feedSection") as feedSection!
+
+    // Add a space to the username to account for the l
+    tvc.userName.text = " " + self.sections[section]["userName"]!
+    tvc.listName.text = sections[section]["listname"]!
+
+    let fbuid = self.sections[section]["fbuid"]!
+
+    // TODO User profile
+    let url = NSURL(string: "https://graph.facebook.com/\(fbuid)/picture?height=75&width=75&return_ssl_resources=1")
+
+    let urlRequest = NSURLRequest(URL: url!)
+
+    NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+      // Display the image
+      let image = UIImage(data: data)
+      tvc.userImage.image = image
+    }
+
+    return tvc
   }
 
   // Mark: Table View Delegate. Make a selection.

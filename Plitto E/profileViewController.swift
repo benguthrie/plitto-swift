@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
 
   // println("person")
 
+  // This is called when someone clicks on an item from the list.
   func buildProfile(personName: String, fbuid: String, dittoable: String, shared: String, pID: String){
     println("called test\(personName)")
 

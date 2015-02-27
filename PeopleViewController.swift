@@ -50,7 +50,10 @@ class PeopleViewController: UIViewController {
     var dataRow = peopleList[indexPath.row]
 
     // Async user images
-    let url = NSURL(string: "https://graph.facebook.com/\(dataRow.fbuid)/picture?height=100&width=100&return_ssl_resources=1")
+    let url = NSURL(string: "https://graph.facebook.com/\(dataRow.fbuid)/picture?height=75&width=75&return_ssl_resources=1")
+
+    println(dataRow.fbuid)
+    println(url)
     let urlRequest = NSURLRequest(URL: url!)
 
     NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
