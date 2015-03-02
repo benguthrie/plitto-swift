@@ -74,14 +74,19 @@ class DittoBController: UIViewController {
 
     //Section header register
     var sectionNib = UINib(nibName: "feedSection", bundle: nil)
-    self.tableView.registerNib(sectionNib, forCellReuseIdentifier: "feedSection")
+    tableView.registerNib(sectionNib, forCellReuseIdentifier: "feedSection")
 
     var footerNib = UINib(nibName: "feedFooter", bundle: nil)
-    self.tableView.registerNib(footerNib, forCellReuseIdentifier: "feedFooter")
+    tableView.registerNib(footerNib, forCellReuseIdentifier: "feedFooter")
 
 
     var rowNib = UINib(nibName: "feedRow", bundle: nil)
-    self.tableView.registerNib(rowNib, forCellReuseIdentifier: "feedRow")
+    tableView.registerNib(rowNib, forCellReuseIdentifier: "feedRow")
+
+
+    // Builds cells as they're about to come on screen.
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 250.0
 
     // Insert the table into the view. // UPDATE TODO - This doesn't seem needed.
     // self.view.addSubview(tableView)
@@ -90,7 +95,23 @@ class DittoBController: UIViewController {
     populateTableData()
     // TODO - Whatever function works above, add it here.
 
+  }
 
+  /* Added using the Fox dude's example */
+  override func viewDidAppear(animated: Bool)
+  {
+    super.viewDidAppear(animated)
+
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "contentSizeCategoryChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    println("View did appear")
+  }
+
+  override func viewDidDisappear(animated: Bool)
+  {
+    super.viewDidDisappear(animated)
+
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    println("View did disappear")
   }
 
   /* This will count the number of sections. This is triggered by what? Called just before sections comes in. */
@@ -113,8 +134,13 @@ class DittoBController: UIViewController {
     let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
 
     var tc: feedRow = tableView.dequeueReusableCellWithIdentifier("feedRow") as feedRow!
+
     tc.thingName.text = object["thingName"]
     tc.dateAdded.text = object["added"]
+
+    // Just after setting text.
+    tc.setNeedsUpdateConstraints()
+    tc.updateConstraintsIfNeeded()
 
     return tc
 
@@ -126,43 +152,47 @@ class DittoBController: UIViewController {
   }
 
   // Sets the height of the section header. Required to make the first section header appear.
+
+  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    // TODO - Calculate the correct header size. 
+
+
+    return CGFloat(Constants().headerSize)
+
+
+  }
+
+/*
+  // Sets the height of the rows.
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return CGFloat(Constants().cellSize)
   }
+*/
 
-  // Sets the height of the section header. Required to make the first section header appear.
-  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return CGFloat(Constants().headerSize)
-  }
-
+/*
   // Sets the height of the section footer.
   func tableView(tableView: UITableView, heightForFoooterInSection section: Int) -> CGFloat {
     return CGFloat(1500)
   }
 
-  // This creates a view for every row in the header.
+
+  // This creates footer - TODO add this with the "More" button
   func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UITableViewCell! {
     var footerCell: feedFooter = tableView.dequeueReusableCellWithIdentifier("feedFooter") as feedFooter!
     return footerCell
   }
+*/
 
   // This creates a view for every row in the header.
   func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UITableViewCell! {
-    // return FeedView().rowView("the list name", theUserName: "user name")
-    // Works, but not styled:      
-    // WORKS when SectionHeader (not nib: ) 
-
-    // Works, but doesn't update values
-    // return FeedView().sectionHeaderNib(self.sections[section]["listname"]!, theUserName: self.sections[section]["userName"]!, userFbuid: self.sections[section]["fbuid"]! )
-
-    // In the people view section: tempItem["ik"] = json["results"][index]["lists"][indexB]["items"][indexC]["ik"].string!
-
 
     var tvc: feedSection = tableView.dequeueReusableCellWithIdentifier("feedSection") as feedSection!
 
     // Add a space to the username to account for the l
     tvc.userName.text = " " + self.sections[section]["userName"]!
     tvc.listName.text = sections[section]["listname"]!
+    tableView.estimatedRowHeight = 160
+
 
     let fbuid = self.sections[section]["fbuid"]!
 
@@ -176,6 +206,9 @@ class DittoBController: UIViewController {
       let image = UIImage(data: data)
       tvc.userImage.image = image
     }
+
+    tvc.setNeedsUpdateConstraints()
+    tvc.updateConstraintsIfNeeded()
 
     return tvc
   }

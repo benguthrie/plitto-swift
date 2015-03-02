@@ -2,40 +2,100 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="thb-YB-esG" userLabel="Feed Section Cell" customClass="feedSection" customModule="Plitto_E" colorLabel="IBBuiltInLabel-Orange">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedSection" id="thb-YB-esG" userLabel="Feed Section Cell" customClass="feedSection" customModule="Plitto_E" colorLabel="IBBuiltInLabel-Orange">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="thb-YB-esG" id="SEp-H3-YV8" userLabel="feedSectionContainer">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="thb-YB-esG" id="SEp-H3-YV8" userLabel="feedSectionContainer">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-5X-6fR" userLabel="userName">
-                        <rect key="frame" x="43" y="0.0" width="277" height="21"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-Vc-DWY" userLabel="List Line">
+                        <rect key="frame" x="0.0" y="30" width="300" height="21"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder-outline" translatesAutoresizingMaskIntoConstraints="NO" id="iYK-Kr-8LK" userLabel="Folder Icon">
+                                <rect key="frame" x="5" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="FQ6-vd-aYO"/>
+                                    <constraint firstAttribute="width" constant="20" id="KH5-bk-q5Q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listname" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-vM-JeL">
+                                <rect key="frame" x="35" y="0.0" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-outline" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-7d-uIq" userLabel="Add Button">
+                                <rect key="frame" x="271" y="2" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="ZDd-SY-RFV"/>
+                                    <constraint firstAttribute="height" constant="25" id="ogl-ud-R1W"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="35" id="8iH-wE-4iS" userLabel="List Name 35 after edge"/>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" id="CMl-RL-UCG" userLabel="Listname Top"/>
+                            <constraint firstItem="PMD-7d-uIq" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="2" id="KiA-Z8-cQJ" userLabel="Button on top"/>
+                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="5" id="TBY-Wz-kVM" userLabel="Icon to Left - 0"/>
+                            <constraint firstAttribute="trailing" secondItem="1GE-vM-JeL" secondAttribute="trailing" constant="35" id="Vzy-Cq-dcy" userLabel="Listname - Take all the space between icons"/>
+                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="5" id="fuJ-Pp-YA8" userLabel="Icon to Top - 0"/>
+                            <constraint firstAttribute="trailing" secondItem="PMD-7d-uIq" secondAttribute="trailing" constant="4" id="n1v-1W-tED" userLabel="Button on right"/>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="sVp-yb-caO" userLabel="Listname - Align with bottom"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKK-AO-C2y" userLabel="User Line">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-t7-Z8V" userLabel="Profile Image">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XzA-vw-AAY"/>
+                                    <constraint firstAttribute="width" constant="30" id="yY3-hS-GWL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="500" placeholderIntrinsicHeight="21" text="UserName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-5X-6fR" userLabel="userName">
+                                <rect key="frame" x="35" y="4" width="261" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-vM-JeL">
-                        <rect key="frame" x="50" y="22" width="262" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-t7-Z8V">
-                        <rect key="frame" x="-1" y="0.0" width="44" height="44"/>
-                    </imageView>
+                        <constraints>
+                            <constraint firstItem="ynR-t7-Z8V" firstAttribute="top" secondItem="gKK-AO-C2y" secondAttribute="top" id="0M1-cK-Zq5" userLabel="Profile - Top"/>
+                            <constraint firstItem="Uq8-5X-6fR" firstAttribute="top" secondItem="gKK-AO-C2y" secondAttribute="top" constant="4" id="9h7-2i-nOr" userLabel="Name to top - 4"/>
+                            <constraint firstAttribute="height" constant="30" id="H6x-4u-VuT"/>
+                            <constraint firstAttribute="trailing" secondItem="Uq8-5X-6fR" secondAttribute="trailing" constant="4" id="IDs-aE-1vo" userLabel="Name to end - 4"/>
+                            <constraint firstItem="Uq8-5X-6fR" firstAttribute="leading" secondItem="ynR-t7-Z8V" secondAttribute="trailing" constant="5" id="X00-dm-tES" userLabel="Name to Image - 5"/>
+                            <constraint firstItem="ynR-t7-Z8V" firstAttribute="leading" secondItem="gKK-AO-C2y" secondAttribute="leading" id="pad-qG-59t" userLabel="Profile - Left"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="0z7-TD-Fz9" userLabel="Section ends with listname"/>
+                    <constraint firstAttribute="trailing" secondItem="Eja-Vc-DWY" secondAttribute="trailing" id="6md-5e-SIL" userLabel="List Line - Right"/>
+                    <constraint firstAttribute="trailing" secondItem="gKK-AO-C2y" secondAttribute="trailing" id="7qU-Bo-4SQ" userLabel="User Line - right 0"/>
+                    <constraint firstItem="gKK-AO-C2y" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="top" id="APu-sq-hmp" userLabel="List Line below UserLine"/>
+                    <constraint firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" id="Rms-Su-5UP" userLabel="List Line - left 2"/>
+                    <constraint firstItem="gKK-AO-C2y" firstAttribute="top" secondItem="SEp-H3-YV8" secondAttribute="top" id="ZDD-kO-8qV" userLabel="User rLine - top 0"/>
+                    <constraint firstItem="gKK-AO-C2y" firstAttribute="leading" secondItem="SEp-H3-YV8" secondAttribute="leading" id="fLB-CL-hu0" userLabel="User Line - left 2 0"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="listName" destination="1GE-vM-JeL" id="Oq4-oT-8Sf"/>
                 <outlet property="userImage" destination="ynR-t7-Z8V" id="dRP-Lh-cmI"/>
                 <outlet property="userName" destination="Uq8-5X-6fR" id="gmD-5N-Am7"/>
             </connections>
-            <point key="canvasLocation" x="92" y="216"/>
+            <point key="canvasLocation" x="671" y="93"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="folder-outline" width="30" height="30"/>
+        <image name="plus-outline" width="30" height="30"/>
+    </resources>
 </document>

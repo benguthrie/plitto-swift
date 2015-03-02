@@ -13,8 +13,8 @@ class Constants {
   let cellSize: Int
 
   init(){
-    self.headerSize = 50
-    self.cellSize = 75
+    self.headerSize = 59
+    self.cellSize = 35
   }
 /*
   func size(type: String) -> CGFloat?{

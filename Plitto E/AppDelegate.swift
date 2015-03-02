@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+
+/* Copied from Tyler Fox's TableViewCellWithAutoLayout     window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    var viewController = TableViewController(style: .Plain)
+    window!.rootViewController = UINavigationController(rootViewController: viewController)
+    window!.makeKeyAndVisible()
+    */
+
     return true
   }
 

@@ -14,7 +14,6 @@
 		878012AD30D34A0EC8ACCDFD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4BCE7F14F19DB04DBF896E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52CE5871A94E34000685D58 /* PlittoAPI.swift */; };
 		B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949761A9D32A30021A6E5 /* DittoB.swift */; };
-		B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497A1A9D33C00021A6E5 /* FeedView.swift */; };
 		B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599497C1A9D35D30021A6E5 /* Constants.swift */; };
 		B59949831A9E50C80021A6E5 /* feedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59949821A9E50C80021A6E5 /* feedSection.swift */; };
 		B59949871A9E58CE0021A6E5 /* feedSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59949861A9E58CE0021A6E5 /* feedSection.xib */; };
@@ -66,7 +65,6 @@
 		7AAC7960BDB7400114E9F1E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B52CE5871A94E34000685D58 /* PlittoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlittoAPI.swift; sourceTree = "<group>"; };
 		B59949761A9D32A30021A6E5 /* DittoB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DittoB.swift; sourceTree = "<group>"; };
-		B599497A1A9D33C00021A6E5 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		B599497C1A9D35D30021A6E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B59949821A9E50C80021A6E5 /* feedSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedSection.swift; sourceTree = "<group>"; };
 		B59949861A9E58CE0021A6E5 /* feedSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedSection.xib; sourceTree = "<group>"; };
@@ -92,6 +90,7 @@
 		B5CF1A311A929A4700BCCFDF /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		B5CF1A351A929B0500BCCFDF /* PersonCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCellTableViewCell.swift; sourceTree = "<group>"; };
 		B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoFriendList.swift; sourceTree = "<group>"; };
+		B5D0AF271AA0F20D009322C1 /* Plitto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plitto-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF4BCE7F14F19DB04DBF896E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +133,7 @@
 		B5CF19BF1A910FF500BCCFDF = {
 			isa = PBXGroup;
 			children = (
+				B5D0AF271AA0F20D009322C1 /* Plitto-Bridging-Header.h */,
 				B5CECEB31A9684BB00D2C66B /* plittoAPI.playground */,
 				B5CF19F11A911DA000BCCFDF /* Frameworks */,
 				B5CF19CA1A910FF500BCCFDF /* Project Files */,
@@ -161,14 +161,12 @@
 				B59949901A9FBE500021A6E5 /* feedFooter.swift */,
 				B59949881A9E92400021A6E5 /* feedRow.xib */,
 				B599498A1A9E92520021A6E5 /* feedRow.swift */,
-				B599497A1A9D33C00021A6E5 /* FeedView.swift */,
 				B59949761A9D32A30021A6E5 /* DittoB.swift */,
 				B5CF19F41A9243D400BCCFDF /* DemoContent.swift */,
 				B5CF1A2F1A9299CB00BCCFDF /* PeopleViewController.swift */,
 				B5B4AB491A93EA6500F78F20 /* profileViewController.swift */,
 				B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */,
 				B52CE5871A94E34000685D58 /* PlittoAPI.swift */,
-				B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */,
 				B5CF19D31A910FF600BCCFDF /* Main.storyboard */,
 				B5CF1A311A929A4700BCCFDF /* PersonCell.xib */,
 				B5CF1A351A929B0500BCCFDF /* PersonCellTableViewCell.swift */,
@@ -178,6 +176,7 @@
 				B5CF19F61A9243E700BCCFDF /* Plitto Classes */,
 				B599497C1A9D35D30021A6E5 /* Constants.swift */,
 				B599498C1A9FAFAB0021A6E5 /* timeAgo.swift */,
+				B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */,
 			);
 			name = "Project Files";
 			path = "Plitto E";
@@ -428,7 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B599497B1A9D33C00021A6E5 /* FeedView.swift in Sources */,
 				B599497D1A9D35D30021A6E5 /* Constants.swift in Sources */,
 				B59949911A9FBE500021A6E5 /* feedFooter.swift in Sources */,
 				B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */,

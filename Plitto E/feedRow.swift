@@ -13,8 +13,8 @@ class feedRow: UITableViewCell {
   @IBOutlet var dateAdded: UILabel!
   @IBOutlet var dittoStatus: UIButton!
 
-  @IBAction func dittoButton(sender: UIButton) {
-    println("Ditto Pressed")
+  @IBAction func DittoAction(sender: AnyObject) {
+    println("Got the ditto")
   }
 
   override func setSelected(selected: Bool, animated: Bool) {

@@ -9,5 +9,7 @@
 #ifndef Plitto_E_Plitto_Bridging_Header_h
 #define Plitto_E_Plitto_Bridging_Header_h
 
+// To use the briding header.
+#import PureLayout/PureLayout.h
 
 #endif
