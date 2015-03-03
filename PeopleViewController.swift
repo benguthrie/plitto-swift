@@ -94,7 +94,7 @@ class PeopleViewController: UIViewController {
 
     // viewToShow.personName = selectedPerson.name
 
-    // Call the functi
+    // Call the func
     viewToShow.buildProfile(
       selectedPerson.name,
       fbuid: selectedPerson.fbuid,

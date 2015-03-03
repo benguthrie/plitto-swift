@@ -149,6 +149,30 @@ class DittoBController: UIViewController {
   // Select management
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
     println("Selected at \(indexPath.row)")
+
+    // Get that uer's information.
+    /*
+    let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
+
+    var tc: feedRow = tableView.dequeueReusableCellWithIdentifier("feedRow") as feedRow!
+
+    tc.thingName.text = object["thingName"]
+  */
+
+    let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
+    println(object)
+    println(object["thingName"])
+
+/*    // Call the func
+viewToShow.buildProfile(
+selectedPerson.name,
+fbuid: selectedPerson.fbuid,
+dittoable: selectedPerson.dittoable,
+shared: selectedPerson.shared,
+pID: selectedPerson.id
+)
+*/
+
   }
 
   // Sets the height of the section header. Required to make the first section header appear.
