@@ -24,6 +24,8 @@ class AddListController: UIViewController {
     println("Text Changed")
     println(addListText.text)
     // TODO - This event is not being triggered.
+    // Based on this event, the search should be triggered
+    
 
   }
 
