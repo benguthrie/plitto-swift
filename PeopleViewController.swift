@@ -29,11 +29,42 @@ class PeopleViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-
-    // Adds the PersonCell.xib file to be the table rows.
     var nib = UINib(nibName: "PersonCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "personCell")
 
+    var yOrig = self.tabBarController?.tabBar.frame.origin.y
+    var yMax = CGRectGetMaxY(self.view.frame)
+
+    /* BEGIN RESTORE TAB BAR */
+    var isVisible = yOrig < yMax
+
+    println("isVisibile: \(isVisible)")
+    println("origin y \(yOrig)")
+    println("view frame \(yMax)")
+
+    // Test for nil
+    if ( yOrig == nil){
+
+
+      let duration:NSTimeInterval = 0.3
+      let frame = self.tabBarController?.tabBar.frame
+      let height = frame?.size.height
+      println("make show yOrig was nil, duration: \(duration) frame: \(frame) height: \(height)")
+
+/*
+      UIView.animateWithDuration(duration) {
+        //        self.tabBarController?.tabBar.frame = CGRectOffset(frame!, 0, height!)
+        // Doesn't work. self.tabBarController?.tabBar.frame = CGRectOffset(50.0, 0, 50.0)
+        
+        println("Should be showing the tab bar now.")
+        return
+
+      }
+*/
+
+      
+      
+    }
   }
 
   // Initially, show the list of friends.
@@ -52,8 +83,6 @@ class PeopleViewController: UIViewController {
     // Async user images
     let url = NSURL(string: "https://graph.facebook.com/\(dataRow.fbuid)/picture?height=75&width=75&return_ssl_resources=1")
 
-    println(dataRow.fbuid)
-    println(url)
     let urlRequest = NSURLRequest(URL: url!)
 
     NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in

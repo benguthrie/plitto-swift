@@ -23,47 +23,20 @@ class ProfileViewController: UIViewController {
   var theLinkSource: String!
 
   @IBAction func test(sender: AnyObject) {
-    println("Pressed 'Back'. LinkSource: \(theLinkSource)")
+    // println("Pressed 'Back'. LinkSource: \(theLinkSource)")
+
+    // Close this view. Remove this view.
+
+    self.dismissViewControllerAnimated(true, completion: {});
+
 
     // Now, navigate back to the source of the click.
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let viewToShow = storyboard.instantiateViewControllerWithIdentifier(theLinkSource) as PeopleViewController
+    // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    // let viewToShow = storyboard.instantiateViewControllerWithIdentifier(theLinkSource) as PeopleViewController
 
 
-
-    var isVisible = self.tabBarController?.tabBar.frame.origin.y < CGRectGetMaxY(self.view.frame)
-
-    println("isVisibile: \(isVisible)")
-
-
-    // Now, show the tab bar
-    if ( isVisible == true) {
-      println("Tab Bar IS visible")
-      /*
-      // get a frame calculation ready
-      let frame = self.tabBarController?.tabBar.frame
-      let height = frame?.size.height
-      let offsetY = (isVisible ? -height! : height)
-
-      // zero duration means no animation
-      let duration:NSTimeInterval = 0.3
-
-      //  animate the tabBar
-      if frame != nil {
-        UIView.animateWithDuration(duration) {
-          self.tabBarController?.tabBar.frame = CGRectOffset(frame!, 0, offsetY!)
-          return
-        }
-      }
-      */
-
-    } else {
-      println("It is hiddend")
-    }
-
-
-
-    self.presentViewController(viewToShow, animated: true, completion: nil)
+    //self.presentViewController(viewToShow, animated: true, completion: nil)
+    // Can we just destroy the current view? self.(viewToShow, animated: true, completion: nil)
 
   }
 
@@ -79,7 +52,9 @@ class ProfileViewController: UIViewController {
     DittoableThings.text = dittoable
     plittoId.text = pID
 
+    // Takes you back where you were 
     theLinkSource = linkSource
+    // theLinkSource = "mainNavController" // Navigates to the main controller
 
 
     println("linkSource: \(linkSource)")

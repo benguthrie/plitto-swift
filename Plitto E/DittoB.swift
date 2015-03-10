@@ -160,8 +160,7 @@ class DittoBController: UIViewController {
   */
 
     let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
-    println(object)
-    println(object["thingName"])
+
 
 /*    // Call the func
 viewToShow.buildProfile(

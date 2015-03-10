@@ -16,19 +16,16 @@ class feedSection: UITableViewCell {
 /*
   override init(style: UITableViewCellStyle, reuseIdentifier: String!){
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    println("initted feedSection")
     setupViews()
   }
 
   required init(coder aDecoder: NSCoder)
   {
     super.init(coder: aDecoder)
-    println("Required init")
     setupViews()
   }
 
   func setupViews(){
-    println("Did setup a view")
 
   // May not need these due to the .xib.
   // userName.lineBreakMode = .ByTruncatingTail

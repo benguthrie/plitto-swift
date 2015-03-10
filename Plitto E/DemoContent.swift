@@ -59,16 +59,11 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
 
       for (index, item) in enumerate(json["results"]){
 
-        // println(json["results"][index]["username"])
-
         for (indexB, itemB) in enumerate(json["results"][index]["lists"]){
 
           // var tempSectionRows = Array<String>()
           if let section = json["results"][index]["lists"][indexB]["listname"].string {
-            // println("Valid List Name")
-            // var listname: String =
-            //  tempSections.append(["listname": listname])
-            // tempSections.append( [ "listname": listname, "testName": "test here"] )
+
             tempSections.append( ["listname": json["results"][index]["lists"][indexB]["listname"].string!, "userName": json["results"][index]["username"].string!
               , "fbuid": json["results"][index]["fbuid"].string!])
             // Create the placeholder for these items.
@@ -80,8 +75,6 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
 
           // Go through each item to add it to the section Rows.
           for (indexC, itemC ) in enumerate(json["results"][index]["lists"][indexB]["items"]){
-            //println("THis:?")
-            // println(json["results"][index]["lists"][indexB]["items"])
 
             // TODO 2 - The conversion from JSON to this object feels like it should be easier than this.
             if let sectionRow = json["results"][index]["lists"][indexB]["items"][indexC]["thingname"].string {
