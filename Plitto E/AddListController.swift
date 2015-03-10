@@ -20,12 +20,16 @@ class AddListController: UIViewController {
     println(addListText.text)
   }
 
+  @IBAction func AddListSubmit(sender: AnyObject) {
+    println("Editing ended")
+  }
+  
   @IBAction func textChanged(sender: AnyObject) {
     println("Text Changed")
     println(addListText.text)
     // TODO - This event is not being triggered.
     // Based on this event, the search should be triggered
-    
+    var AddListContext = "Updated"
 
   }
 

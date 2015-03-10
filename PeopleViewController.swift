@@ -75,6 +75,8 @@ class PeopleViewController: UIViewController {
 
 
   // Mark: Table View Delegate
+
+  // This function shows a user's profile view.
   func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
     let selectedPerson = peopleList[indexPath.row]
     // delegate?.personSelected(selectedPerson)
@@ -100,7 +102,8 @@ class PeopleViewController: UIViewController {
       fbuid: selectedPerson.fbuid,
       dittoable: selectedPerson.dittoable,
       shared: selectedPerson.shared,
-      pID: selectedPerson.id
+      pID: selectedPerson.id,
+      linkSource: "peopleList"
     )
  
   }

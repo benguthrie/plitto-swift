@@ -8,7 +8,7 @@
         <!--People-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="People" id="9pv-A4-QxB" customClass="PeopleViewController" customModule="Plitto_E" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peopleList" title="People" hidesBottomBarWhenPushed="YES" id="9pv-A4-QxB" customClass="PeopleViewController" customModule="Plitto_E" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pbE-HT-EeM"/>
                         <viewControllerLayoutGuide type="bottom" id="nXR-vd-qJN"/>
@@ -48,7 +48,7 @@
         <!--Person Profile-->
         <scene sceneID="0Wr-Jy-1XG">
             <objects>
-                <viewController storyboardIdentifier="personProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mI7-Xf-A28" userLabel="Person Profile" customClass="ProfileViewController" customModule="Plitto_E" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="personProfile" title="UserProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mI7-Xf-A28" userLabel="Person Profile" customClass="ProfileViewController" customModule="Plitto_E" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wxn-Vr-6AV"/>
                         <viewControllerLayoutGuide type="bottom" id="ahN-iT-4BS"/>
@@ -61,10 +61,17 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="User Profile Nav" id="BQV-8O-CDo">
-                                        <barButtonItem key="leftBarButtonItem" title="back" id="Ed0-z1-myA">
-                                            <connections>
-                                                <segue destination="9pv-A4-QxB" kind="modal" identifier="Show User" id="ISt-uR-5R0"/>
-                                            </connections>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="0lq-TU-JiT">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WbU-6A-2P4">
+                                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="test:" destination="mI7-Xf-A28" eventType="touchUpInside" id="ViX-4e-ijT"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -242,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6I-cr-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="-263"/>
+            <point key="canvasLocation" x="1352" y="-263"/>
         </scene>
         <!--Add Controller-->
         <scene sceneID="3PM-tn-eJP">
@@ -270,6 +277,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="AddListSubmit:" destination="wBi-E7-Q1Y" eventType="editingDidEnd" id="24y-jg-URI"/>
                                             <action selector="textChanged:" destination="wBi-E7-Q1Y" eventType="editingChanged" id="U7Z-ZB-NeA"/>
                                         </connections>
                                     </textField>
@@ -300,7 +308,7 @@
                                 <rect key="frame" x="0.0" y="102" width="320" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Show Above" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UE-9N-dpg" userLabel="Context Note">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Show Below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UE-9N-dpg" userLabel="Context Note">
                                 <rect key="frame" x="16" y="81" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -335,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="487" y="-263"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Controller-->
         <scene sceneID="DVT-5Q-eGl">
             <objects>
-                <viewController id="apx-Du-nmL" sceneMemberID="viewController">
+                <viewController id="apx-Du-nmL" userLabel="Search Controller" customClass="SearchController" customModule="Plitto_E" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j9c-ud-8YF"/>
                         <viewControllerLayoutGuide type="bottom" id="eeS-m5-0Hw"/>
@@ -348,44 +356,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEo-wW-WLb" userLabel="Search Input Area">
-                                <rect key="frame" x="0.0" y="20" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V67-th-yCg">
-                                        <rect key="frame" x="8" y="0.0" width="97" height="100"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V67-th-yCg">
+                                        <rect key="frame" x="8" y="0.0" width="269" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="SearchText:" destination="apx-Du-nmL" eventType="editingChanged" id="8Lb-71-iqh"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-ru-e8p">
-                                        <rect key="frame" x="266" y="0.0" width="48" height="30"/>
-                                        <state key="normal" title="Search">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-ru-e8p">
+                                        <rect key="frame" x="277" y="-5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="oa0-di-uhx"/>
+                                            <constraint firstAttribute="width" constant="35" id="tFl-f9-bP0"/>
+                                        </constraints>
+                                        <state key="normal" image="ios7-search">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="V67-th-yCg" firstAttribute="leading" secondItem="BEo-wW-WLb" secondAttribute="leading" constant="8" id="6mp-Mf-0EE" userLabel="Box Left"/>
-                                    <constraint firstAttribute="trailing" secondItem="ThK-ru-e8p" secondAttribute="trailing" id="Iei-c9-7d4" userLabel="Label Right"/>
+                                    <constraint firstItem="V67-th-yCg" firstAttribute="leading" secondItem="BEo-wW-WLb" secondAttribute="leadingMargin" id="6mp-Mf-0EE" userLabel="Box Left"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ThK-ru-e8p" secondAttribute="trailing" id="Iei-c9-7d4" userLabel="Label Right"/>
                                     <constraint firstAttribute="bottom" secondItem="V67-th-yCg" secondAttribute="bottom" id="Jkd-Ud-VR4" userLabel="Box Bottom"/>
+                                    <constraint firstItem="ThK-ru-e8p" firstAttribute="leading" secondItem="V67-th-yCg" secondAttribute="trailing" id="SfA-LY-hlf" userLabel="Label Search Area"/>
                                     <constraint firstItem="V67-th-yCg" firstAttribute="top" secondItem="BEo-wW-WLb" secondAttribute="top" id="ZRA-yi-xht" userLabel="Box Top"/>
                                     <constraint firstAttribute="bottom" secondItem="ThK-ru-e8p" secondAttribute="bottom" id="dLu-IY-dsh" userLabel="Label Bottom"/>
-                                    <constraint firstItem="ThK-ru-e8p" firstAttribute="trailing" secondItem="V67-th-yCg" secondAttribute="trailing" constant="8" id="uWt-gu-IJH" userLabel="Search Left"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-jp-mNN">
-                                <rect key="frame" x="0.0" y="128" width="320" height="391"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-jp-mNN">
+                                <rect key="frame" x="0.0" y="50" width="320" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="G6K-jp-mNN" firstAttribute="leading" secondItem="3zo-cf-cIJ" secondAttribute="leading" id="0s6-A0-BSu" userLabel="Table - Leading"/>
+                            <constraint firstAttribute="trailing" secondItem="G6K-jp-mNN" secondAttribute="trailing" id="9P4-yh-MF1" userLabel="Table Trailing"/>
                             <constraint firstItem="BEo-wW-WLb" firstAttribute="leading" secondItem="3zo-cf-cIJ" secondAttribute="leading" id="AgS-R7-6Fe" userLabel="Group Leading"/>
                             <constraint firstItem="BEo-wW-WLb" firstAttribute="top" secondItem="j9c-ud-8YF" secondAttribute="bottom" id="Ivs-bI-P6s" userLabel="Group to Top"/>
-                            <constraint firstItem="eeS-m5-0Hw" firstAttribute="top" secondItem="BEo-wW-WLb" secondAttribute="bottom" constant="399" id="L3x-wo-qJh"/>
+                            <constraint firstItem="G6K-jp-mNN" firstAttribute="top" secondItem="BEo-wW-WLb" secondAttribute="bottom" id="fsV-mZ-4g3" userLabel="Table Below Group"/>
                             <constraint firstAttribute="trailing" secondItem="BEo-wW-WLb" secondAttribute="trailing" id="g78-9r-acz" userLabel="Group Trailing"/>
+                            <constraint firstItem="eeS-m5-0Hw" firstAttribute="top" secondItem="G6K-jp-mNN" secondAttribute="bottom" id="wSp-xv-xin" userLabel="Table - Bottom"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="UeZ-KM-NFV"/>
+                    <connections>
+                        <outlet property="SearchText" destination="V67-th-yCg" id="8pz-zC-GOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEZ-j2-viu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,6 +513,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController title="Plitto Tab Control" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aTA-aU-eN8"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -499,10 +521,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="apx-Du-nmL" kind="relationship" relationship="viewControllers" id="VLq-QZ-GQD"/>
                         <segue destination="wBi-E7-Q1Y" kind="relationship" relationship="viewControllers" id="flj-0w-tbc"/>
                         <segue destination="sGo-FS-1N3" kind="relationship" relationship="viewControllers" id="lPy-un-I0F"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="apx-Du-nmL" kind="relationship" relationship="viewControllers" id="VLq-QZ-GQD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -512,6 +534,7 @@
     </scenes>
     <resources>
         <image name="checkmark-outline" width="30" height="30"/>
+        <image name="ios7-search" width="30" height="30"/>
         <image name="people-outline" width="30" height="30"/>
         <image name="plus-outline" width="30" height="30"/>
         <image name="refresh" width="30" height="30"/>
@@ -521,7 +544,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="u7Y-xg-7CH"/>
-    </inferredMetricsTieBreakers>
 </document>
