@@ -40,12 +40,23 @@ class feedSection: UITableViewCell {
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     // 
-    println("selected a user section \(selected)")
+    println("selected a user section \(selected) \(userName.text) \(listName.text)")
     // println(selected)
 
-
+    
 
   }
 
+  // Action when clicking on the list line
+  @IBAction func List(sender: UIButton) {
+    println("List Line Selected \(sender) \(userName.text) \(listName.text)")
+
+  }
+
+
+  // Action when clicking on the user line
+  @IBAction func UserLineButton(sender: UIButton) {
+    println("User Selected \(sender) \(userName.text) \(listName.text)")
+  }
 
 }

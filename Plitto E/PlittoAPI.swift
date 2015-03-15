@@ -30,7 +30,7 @@ class PlittoAPI {
   }
 
   func formatJson(responseObject: AnyObject) -> (sections: Array<Dictionary<String,String>>, sectionRows: Array<Array<Dictionary<String,String>>>){
-
+    // TODO - Why is this here?
     var sections = [["listname":"Test", "userName":"John Doe"]]
     var sectionRows = [[["thingName":"Something Awesome","ik":"woiuhrgownrgh","added":"today","tid":"124124","id":"1412","dittoCount":"0"]]]
 

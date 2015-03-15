@@ -1,4 +1,4 @@
-//
+ //
 //  DemoContent.swift
 //  Plitto E
 //
@@ -94,6 +94,23 @@ public class demoAPI: NSObject, NSURLConnectionDataDelegate {
               tempItem["tid"] = json["results"][index]["lists"][indexB]["items"][indexC]["tid"].string!
               tempItem["id"] = json["results"][index]["lists"][indexB]["items"][indexC]["id"].string!
               tempItem["dittoCount"] = json["results"][index]["lists"][indexB]["items"][indexC]["dittoCount"].string!
+
+              /* R6FEH
+              tempItem["mykey"] = json["results"][index]["lists"][indexB]["items"][indexC]["mykey"].string!
+
+              // Ditto information
+              tempItem["dittokey"] = json["results"][index]["lists"][indexB]["items"][indexC]["dittokey"].string!
+              tempItem["dittouser"] = json["results"][index]["lists"][indexB]["items"][indexC]["dittouser"].string!
+              tempItem["dittousername"] = json["results"][index]["lists"][indexB]["items"][indexC]["dittousername"].string!
+
+              // Comment Information
+
+              tempItem["commentActive"] = json["results"][index]["lists"][indexB]["items"][indexC]["commentActive"].string!
+              tempItem["commentCount"] = json["results"][index]["lists"][indexB]["items"][indexC]["commentCount"].string!
+              tempItem["commentRead"] = json["results"][index]["lists"][indexB]["items"][indexC]["commentRead"].string!
+              tempItem["commentText"] = json["results"][index]["lists"][indexB]["items"][indexC]["commentText"].string!
+
+              */
 
               tempSectionRows[sectionIndex - 1].append(tempItem)
             }

@@ -35,6 +35,8 @@
 		B5CF1A381A92A24500BCCFDF /* DemoFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF1A371A92A24500BCCFDF /* DemoFriendList.swift */; };
 		B5ECFEE01AAA578C008ED1E2 /* AddListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECFEDF1AAA578C008ED1E2 /* AddListController.swift */; };
 		B5ECFEE21AADF7F5008ED1E2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECFEE11AADF7F5008ED1E2 /* SearchController.swift */; };
+		B5FCFF911AB23673008E6905 /* thingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCFF901AB23673008E6905 /* thingController.swift */; };
+		B5FCFF951AB373D2008E6905 /* listController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCFF941AB373D2008E6905 /* listController.swift */; };
 		BB9E7B2CAB9F1982C6EAED08 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 		E526DA9D2D5C4211A25C24FA /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 		ED1A0D0498E597EB046DEE79 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -95,6 +97,8 @@
 		B5D0AF271AA0F20D009322C1 /* Plitto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plitto-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5ECFEDF1AAA578C008ED1E2 /* AddListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddListController.swift; sourceTree = "<group>"; };
 		B5ECFEE11AADF7F5008ED1E2 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		B5FCFF901AB23673008E6905 /* thingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thingController.swift; sourceTree = "<group>"; };
+		B5FCFF941AB373D2008E6905 /* listController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listController.swift; sourceTree = "<group>"; };
 		CF4BCE7F14F19DB04DBF896E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BB201EF3778357772F77B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +187,8 @@
 				B5CF19CD1A910FF500BCCFDF /* AppDelegate.swift */,
 				B5ECFEDF1AAA578C008ED1E2 /* AddListController.swift */,
 				B5ECFEE11AADF7F5008ED1E2 /* SearchController.swift */,
+				B5FCFF901AB23673008E6905 /* thingController.swift */,
+				B5FCFF941AB373D2008E6905 /* listController.swift */,
 			);
 			name = "Project Files";
 			path = "Plitto E";
@@ -439,6 +445,7 @@
 				B52CE5881A94E34000685D58 /* PlittoAPI.swift in Sources */,
 				B5CF1A301A9299CB00BCCFDF /* PeopleViewController.swift in Sources */,
 				B5CF19F51A9243D400BCCFDF /* DemoContent.swift in Sources */,
+				B5FCFF951AB373D2008E6905 /* listController.swift in Sources */,
 				B5ECFEE01AAA578C008ED1E2 /* AddListController.swift in Sources */,
 				B59949771A9D32A30021A6E5 /* DittoB.swift in Sources */,
 				B599498B1A9E92520021A6E5 /* feedRow.swift in Sources */,
@@ -447,6 +454,7 @@
 				B59949831A9E50C80021A6E5 /* feedSection.swift in Sources */,
 				B5CF1A361A929B0500BCCFDF /* PersonCellTableViewCell.swift in Sources */,
 				B5CF1A381A92A24500BCCFDF /* DemoFriendList.swift in Sources */,
+				B5FCFF911AB23673008E6905 /* thingController.swift in Sources */,
 				B5CF19CE1A910FF500BCCFDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

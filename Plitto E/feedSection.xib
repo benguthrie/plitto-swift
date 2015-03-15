@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,41 +12,6 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="thb-YB-esG" id="SEp-H3-YV8" userLabel="feedSectionContainer">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-Vc-DWY" userLabel="List Line">
-                        <rect key="frame" x="0.0" y="30" width="300" height="21"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder-outline" translatesAutoresizingMaskIntoConstraints="NO" id="iYK-Kr-8LK" userLabel="Folder Icon">
-                                <rect key="frame" x="5" y="5" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="FQ6-vd-aYO"/>
-                                    <constraint firstAttribute="width" constant="20" id="KH5-bk-q5Q"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listname" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-vM-JeL">
-                                <rect key="frame" x="35" y="0.0" width="230" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-outline" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-7d-uIq" userLabel="Add Button">
-                                <rect key="frame" x="271" y="2" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="ZDd-SY-RFV"/>
-                                    <constraint firstAttribute="height" constant="25" id="ogl-ud-R1W"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="1GE-vM-JeL" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="35" id="8iH-wE-4iS" userLabel="List Name 35 after edge"/>
-                            <constraint firstItem="1GE-vM-JeL" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" id="CMl-RL-UCG" userLabel="Listname Top"/>
-                            <constraint firstItem="PMD-7d-uIq" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="2" id="KiA-Z8-cQJ" userLabel="Button on top"/>
-                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="5" id="TBY-Wz-kVM" userLabel="Icon to Left - 0"/>
-                            <constraint firstAttribute="trailing" secondItem="1GE-vM-JeL" secondAttribute="trailing" constant="35" id="Vzy-Cq-dcy" userLabel="Listname - Take all the space between icons"/>
-                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="5" id="fuJ-Pp-YA8" userLabel="Icon to Top - 0"/>
-                            <constraint firstAttribute="trailing" secondItem="PMD-7d-uIq" secondAttribute="trailing" constant="4" id="n1v-1W-tED" userLabel="Button on right"/>
-                            <constraint firstItem="1GE-vM-JeL" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="sVp-yb-caO" userLabel="Listname - Align with bottom"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKK-AO-C2y" userLabel="User Line">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                         <subviews>
@@ -75,15 +39,76 @@
                             <constraint firstItem="ynR-t7-Z8V" firstAttribute="leading" secondItem="gKK-AO-C2y" secondAttribute="leading" id="pad-qG-59t" userLabel="Profile - Left"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-Vc-DWY" userLabel="List Line">
+                        <rect key="frame" x="0.0" y="30" width="300" height="29"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder-outline" translatesAutoresizingMaskIntoConstraints="NO" id="iYK-Kr-8LK" userLabel="Folder Icon">
+                                <rect key="frame" x="5" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="FQ6-vd-aYO"/>
+                                    <constraint firstAttribute="width" constant="20" id="KH5-bk-q5Q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listname" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1GE-vM-JeL">
+                                <rect key="frame" x="35" y="0.0" width="230" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-outline" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-7d-uIq" userLabel="Add Button">
+                                <rect key="frame" x="271" y="2" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="ZDd-SY-RFV"/>
+                                    <constraint firstAttribute="height" constant="25" id="ogl-ud-R1W"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="35" id="8iH-wE-4iS" userLabel="List Name 35 after edge"/>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" id="CMl-RL-UCG" userLabel="Listname Top"/>
+                            <constraint firstItem="PMD-7d-uIq" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="2" id="KiA-Z8-cQJ" userLabel="Button on top"/>
+                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" constant="5" id="TBY-Wz-kVM" userLabel="Icon to Left - 0"/>
+                            <constraint firstAttribute="trailing" secondItem="1GE-vM-JeL" secondAttribute="trailing" constant="35" id="Vzy-Cq-dcy" userLabel="Listname - Take all the space between icons"/>
+                            <constraint firstItem="iYK-Kr-8LK" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" constant="5" id="fuJ-Pp-YA8" userLabel="Icon to Top - 0"/>
+                            <constraint firstAttribute="trailing" secondItem="PMD-7d-uIq" secondAttribute="trailing" constant="4" id="n1v-1W-tED" userLabel="Button on right"/>
+                            <constraint firstItem="1GE-vM-JeL" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="sVp-yb-caO" userLabel="Listname - Align with bottom"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-MB-WRk" userLabel="List Line Button">
+                        <rect key="frame" x="0.0" y="30" width="300" height="29"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="List:" destination="thb-YB-esG" eventType="touchUpInside" id="Ice-EV-QyL"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWZ-OT-BHA" userLabel="User Line Button">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="UserLineButton:" destination="thb-YB-esG" eventType="touchUpInside" id="9cm-2a-pha"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="0z7-TD-Fz9" userLabel="Section ends with listname"/>
+                    <constraint firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="0z7-TD-Fz9" userLabel="List Line - Bottom"/>
+                    <constraint firstItem="OWZ-OT-BHA" firstAttribute="bottom" secondItem="gKK-AO-C2y" secondAttribute="bottom" id="4Fn-XQ-QA6" userLabel="User Line Button - Bottom"/>
                     <constraint firstAttribute="trailing" secondItem="Eja-Vc-DWY" secondAttribute="trailing" id="6md-5e-SIL" userLabel="List Line - Right"/>
                     <constraint firstAttribute="trailing" secondItem="gKK-AO-C2y" secondAttribute="trailing" id="7qU-Bo-4SQ" userLabel="User Line - right 0"/>
                     <constraint firstItem="gKK-AO-C2y" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="top" id="APu-sq-hmp" userLabel="List Line below UserLine"/>
+                    <constraint firstItem="T5H-MB-WRk" firstAttribute="trailing" secondItem="Eja-Vc-DWY" secondAttribute="trailing" id="Azc-qy-Z40" userLabel="List Line Button - Right"/>
+                    <constraint firstItem="OWZ-OT-BHA" firstAttribute="top" secondItem="gKK-AO-C2y" secondAttribute="top" id="FAp-Gg-e0u" userLabel="User Line Button - Top"/>
+                    <constraint firstItem="OWZ-OT-BHA" firstAttribute="leading" secondItem="gKK-AO-C2y" secondAttribute="leading" id="Fbf-BQ-nRL" userLabel="User Line Button - Left"/>
+                    <constraint firstItem="T5H-MB-WRk" firstAttribute="top" secondItem="Eja-Vc-DWY" secondAttribute="top" id="JF1-AX-zhm" userLabel="List Line Button - Top"/>
                     <constraint firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" id="Rms-Su-5UP" userLabel="List Line - left 2"/>
+                    <constraint firstItem="OWZ-OT-BHA" firstAttribute="trailing" secondItem="gKK-AO-C2y" secondAttribute="trailing" id="TqO-X8-gcw" userLabel="User Line Button - Right"/>
                     <constraint firstItem="gKK-AO-C2y" firstAttribute="top" secondItem="SEp-H3-YV8" secondAttribute="top" id="ZDD-kO-8qV" userLabel="User rLine - top 0"/>
                     <constraint firstItem="gKK-AO-C2y" firstAttribute="leading" secondItem="SEp-H3-YV8" secondAttribute="leading" id="fLB-CL-hu0" userLabel="User Line - left 2 0"/>
+                    <constraint firstItem="T5H-MB-WRk" firstAttribute="leading" secondItem="Eja-Vc-DWY" secondAttribute="leading" id="id7-ik-qGS" userLabel="List Line Button - Left"/>
+                    <constraint firstItem="T5H-MB-WRk" firstAttribute="bottom" secondItem="Eja-Vc-DWY" secondAttribute="bottom" id="smg-3F-lLv" userLabel="List Line Button - Bottom"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

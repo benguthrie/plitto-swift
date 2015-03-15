@@ -38,14 +38,12 @@ class PeopleViewController: UIViewController {
     /* BEGIN RESTORE TAB BAR */
     var isVisible = yOrig < yMax
 
-    println("isVisibile: \(isVisible)")
-    println("origin y \(yOrig)")
-    println("view frame \(yMax)")
+    // println("isVisibile: \(isVisible)")
+    // println("origin y \(yOrig)")
+    // println("view frame \(yMax)")
 
     // Test for nil
     if ( yOrig == nil){
-
-
       let duration:NSTimeInterval = 0.3
       let frame = self.tabBarController?.tabBar.frame
       let height = frame?.size.height

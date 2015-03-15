@@ -16,6 +16,7 @@
 		80F2CC182D05E4D3B4E5A243 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7742FD7DCE5971C4F33D6DE1 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CD50DDB47053943123051A4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 985A80BAD9A8A7F91F0745B2 /* Pods-dummy.m */; };
 		B059A253FEE3D80689B804EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386B58E19AAA1CDB4A00779F /* Foundation.framework */; };
+		B5FCFF931AB24C33008E6905 /* DUMMY.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCFF921AB24C33008E6905 /* DUMMY.swift */; };
 		B9BE91498A960B44AF58E9B9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113E5F09EB912129DA85B78 /* SwiftyJSON.swift */; };
 		EF55F3540F6FA0F90B24DD52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386B58E19AAA1CDB4A00779F /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		9D130426AE3D2994066B326F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A09C6C1A0EADF8B2F64ED25F /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		B50DB322B8F3EB420D0D8979 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		B5FCFF921AB24C33008E6905 /* DUMMY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUMMY.swift; sourceTree = "<group>"; };
 		B6E765AD797B27A94C4964A3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82FC8DA46A430B5FFA1518D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C63C817A08242E717A5F81CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		49DB8593D529B59C6BFAA07F = {
 			isa = PBXGroup;
 			children = (
+				B5FCFF921AB24C33008E6905 /* DUMMY.swift */,
 				5955637FA04728737B1778A8 /* Podfile */,
 				1FB2F30848673708CD537D62 /* Frameworks */,
 				7D16763CA30C299D4641D78D /* Pods */,
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FCFF931AB24C33008E6905 /* DUMMY.swift in Sources */,
 				9CD50DDB47053943123051A4 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5374B2B7D0DC82E8F6A257B0 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -575,6 +580,7 @@
 				PRODUCT_NAME = Pods;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -585,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C769442BCCD88A6B9BFD663 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

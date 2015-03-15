@@ -13,10 +13,12 @@ func thingSelected(thing: Thing)
 }
 */
 
+
 class DittoBController: UIViewController {
 
   let path = "testcontent"
 
+  // Creates the section headers.
   var sections = [[String:String]]()
   // var sectionRows = Array<Dictionary<String, String>>()
   var sectionRows = [[[String:String]]]()
@@ -25,10 +27,13 @@ class DittoBController: UIViewController {
   // This is the table.
   @IBOutlet var tableView: UITableView!
 
+  // Placeholder for what will happen when the callback is complete.
   func completeCallback(){
     println("CallbackF")
   }
 
+
+  // Calls a reload function.
   @IBAction func ReloadContent(sender: UIButton) {
     println("ReloadContentCalled")
 
@@ -51,6 +56,7 @@ class DittoBController: UIViewController {
     // Reset the sections.
     self.sections = []
     self.sectionRows = []
+
     // Load the empty table
     self.tableView.reloadData()
 
@@ -61,12 +67,13 @@ class DittoBController: UIViewController {
       self.sections = returnedSections!
       self.sectionRows = returnedRows!
 
-      // Populate it.
+      // Populate the table with the content that is returned.
       self.tableView.reloadData()
       return
     }
   }
 
+  // Onload.
   override func viewDidLoad() {
     super.viewDidLoad()
     //    println("Super viewDidLoad. Populate data.")
@@ -135,8 +142,17 @@ class DittoBController: UIViewController {
 
     var tc: feedRow = tableView.dequeueReusableCellWithIdentifier("feedRow") as feedRow!
 
+    // Add items into the row. Each item here must have a corresponding outlet in feedRow.swift
+    // Matches NM56U
     tc.thingName.text = object["thingName"]
     tc.dateAdded.text = object["added"]
+    tc.ik = object["ik"]
+    tc.tid = object["tid"]
+
+    // TODO R6FEH - get these back
+    //    
+    tc.mykey = object["mykey"]
+    //    tc.ik.text = object["ik"]
 
     // Just after setting text.
     tc.setNeedsUpdateConstraints()
@@ -146,33 +162,17 @@ class DittoBController: UIViewController {
 
   }
 
+  /*
   // Select management
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
     println("Selected at \(indexPath.row)")
 
-    // Get that uer's information.
-    /*
-    let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
-
-    var tc: feedRow = tableView.dequeueReusableCellWithIdentifier("feedRow") as feedRow!
-
-    tc.thingName.text = object["thingName"]
-  */
 
     let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
 
-
-/*    // Call the func
-viewToShow.buildProfile(
-selectedPerson.name,
-fbuid: selectedPerson.fbuid,
-dittoable: selectedPerson.dittoable,
-shared: selectedPerson.shared,
-pID: selectedPerson.id
-)
-*/
 
   }
+  */
 
   // Sets the height of the section header. Required to make the first section header appear.
 
@@ -238,9 +238,17 @@ pID: selectedPerson.id
 
   // Mark: Table View Delegate. Make a selection.
   func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-    println ("Selected Something from the content list.")
+    println ("Selected Something from the content list in DittoB. \(indexPath)")
+    let object = sectionRows[indexPath.section][indexPath.row] // as NSDictionary
+    println("object for selected thing: \(object)")
+
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    var goThing = storyboard.instantiateViewControllerWithIdentifier("thingDetail") as UIViewController
+    self.presentViewController(goThing, animated:true, completion:nil)
+
   }
-  
+
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
